@@ -1,0 +1,67 @@
+    1  ls -l
+    2  pwd
+    3  whoami
+    4  ls -l
+    5  clear
+    6  fdisk
+    7  lsblk
+    8  fdisk -l
+    9  sudo fdisk -l
+   10  ls -la
+   11  ls -la ~/.ssh
+   12  ls -la
+   13  cd .ssh
+   14  ls -l
+   15  ssh-keygen -t ed25519
+   16  ls -l
+   17  cat id_ed25519.pub 
+   18  cd
+   19  pwd
+   20  mkdir repogit
+   21  cd repogit/
+   22  git clone git@github.com:gabbriel95/gabbriel95-TP2_Mendez_Juan.git
+   23  ls
+   24  cd gabbriel95-TP2_Mendez_Juan/
+   25  ls
+   26  fdisk -l
+   27  sudo fdisk -l
+   28  fdisk /dev/sdd
+   29  sudo fdisk /dev/ssd
+   30  sudo fdisk /dev/sdd
+   31  free
+   32  fre -h
+   33  free -h
+   34  sudo mkswap /dev/ssd1
+   35  sudo mkswap /dev/sdd1
+   36  sudo swapon /dev/sdd1
+   37  free -h
+   38  sudo fdisk /dev/sdc
+   39  sudo wipefs -a /dev/sdc1
+   40  sudo wipefs -a /dev/sdc2
+   41  sudo wipefs -a /dev/sdd2 
+   42  sudo wipefs -a /dev/sdd3
+   43  sudo wipefs -a /dev/sdd5
+   44  sudo wipefs -a /dev/sdd6
+   45  sudo pvcreate /dev/sdd2 /dev/sdd3 /dev/sdd5 /dev/sdd6 /dev/sdc1 /dev/sdc2
+   46  pvs
+   47  sudo pvs
+   48  sudo vgcreate vg_datos /dev/sdc1 /dev/sdd2
+   49  vgs
+   50  sudo vgs
+   51  sudo pvs
+   52  sudo vgcreate vg_web /dev/sdc2
+   53  sudo pvs
+   54  sudo lvcreate -L 1G vg_web -n lv_web1
+   55  sudo lvcreate -L 512M vg_web -n lv_web2
+   56  sudo lvcreate -L 512M vg_web -n lv_web3
+   57  lvs
+   58  sudo lvs
+   59  sudo pvs
+   60  sudo fdisk -l
+   61  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web1
+   62  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web2
+   63  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web3
+   64  sudo pvs > pvs.txt
+   65  sudo vgs > vgs.txt
+   66  sudo lvs > lvs.txt
+   67  history > historial_lvm.txt
